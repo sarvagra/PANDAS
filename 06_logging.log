@@ -1,0 +1,57 @@
+       PassengerId    Survived      Pclass  ...       SibSp       Parch        Fare
+count   891.000000  891.000000  891.000000  ...  891.000000  891.000000  891.000000
+mean    446.000000    0.383838    2.308642  ...    0.523008    0.381594   32.204208
+std     257.353842    0.486592    0.836071  ...    1.102743    0.806057   49.693429
+min       1.000000    0.000000    1.000000  ...    0.000000    0.000000    0.000000
+25%     223.500000    0.000000    2.000000  ...    0.000000    0.000000    7.910400
+50%     446.000000    0.000000    3.000000  ...    0.000000    0.000000   14.454200
+75%     668.500000    1.000000    3.000000  ...    1.000000    0.000000   31.000000
+max     891.000000    1.000000    3.000000  ...    8.000000    6.000000  512.329200
+
+[8 rows x 7 columns]
+                                                  Name     Sex   Age
+0                              Braund, Mr. Owen Harris    male  22.0
+1    Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0
+2                               Heikkinen, Miss. Laina  female  26.0
+3         Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0
+4                             Allen, Mr. William Henry    male  35.0
+..                                                 ...     ...   ...
+886                              Montvila, Rev. Juozas    male  27.0
+887                       Graham, Miss. Margaret Edith  female  19.0
+888           Johnston, Miss. Catherine Helen "Carrie"  female   NaN
+889                              Behr, Mr. Karl Howell    male  26.0
+890                                Dooley, Mr. Patrick    male  32.0
+
+[891 rows x 3 columns]
+Index(['Name', 'Sex', 'Ticket', 'Cabin', 'Embarked'], dtype='object')
+Index(['Age', 'Fare'], dtype='object')
+     Ticket
+4    373450
+5    330877
+6     17463
+7    349909
+8    347742
+9    237736
+10  PP 9549
+   PassengerId  Survived  Pclass  ... Embarked new_column  new_column_one
+0            1         0       3  ...        S          0               4
+1            2         1       1  ...        C          0               3
+2            3         1       3  ...        S          0               6
+3            4         1       1  ...        S          0               5
+4            5         0       3  ...        S          0               8
+
+[5 rows x 14 columns]
+                                                  Name     Sex  ... Cabin Embarked
+0                              Braund, Mr. Owen Harris    male  ...   NaN        S
+1    Cumings, Mrs. John Bradley (Florence Briggs Th...  female  ...   C85        C
+2                               Heikkinen, Miss. Laina  female  ...   NaN        S
+3         Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  ...  C123        S
+4                             Allen, Mr. William Henry    male  ...   NaN        S
+..                                                 ...     ...  ...   ...      ...
+886                              Montvila, Rev. Juozas    male  ...   NaN        S
+887                       Graham, Miss. Margaret Edith  female  ...   B42        S
+888           Johnston, Miss. Catherine Helen "Carrie"  female  ...   NaN        S
+889                              Behr, Mr. Karl Howell    male  ...  C148        C
+890                                Dooley, Mr. Patrick    male  ...   NaN        Q
+
+[891 rows x 5 columns]

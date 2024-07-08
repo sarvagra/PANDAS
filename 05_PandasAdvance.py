@@ -4,11 +4,11 @@ df=pd.read_csv("https://raw.githubusercontent.com/datasciencedojo/datasets/maste
 import logging 
 logging.basicConfig(filename="06_logging.log",level=logging.INFO,format='')
 logging.info(df.describe()) #shows data in a statistical manner
-logging.info(df[['name','sex','age']])    #prints selected columns
+logging.info(df[['Name','Sex','Age']])    #prints selected columns
 
 
-logging.info(df[df.dtypes[df.dtypes =='object'].index].describe()) #prints all data of type OBJECT
-logging.info(df[df.dtypes=='float64'].index) #prints all numerical data.
+logging.info(df.dtypes[df.dtypes =='object'].index) #prints all data of type OBJECT
+logging.info(df.dtypes[df.dtypes=='float64'].index) #prints all numerical data.
  
 # to print data from a particular interval , use [<upper bound>:<lower bound>:<jump>]
 logging.info(df[['Ticket']][4:11])
@@ -22,17 +22,8 @@ df['Cabin'].unique()
 logging.info(df.head())
 
 #filter the data  by age >18.
-if df['Age']>18 :
-    logging.info(df['Age'])
+logging.info(df[df.dtypes[df.dtypes=='object'].index])
 
 #to get the names of all passangers who payed greater fair than average.
-if df[df['Fare']>32.204308 ] :
-    logging.info(df['Fare'])
 
 # to get the name of passangers who didnt pay any fare
-if(df['Fare']==0):
-    logging.info(df['Fare'])
-
-if(df['Sex']=='male'):
-    logging.info(df['sex'])
-    git pus 
