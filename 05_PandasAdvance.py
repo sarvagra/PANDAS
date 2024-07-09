@@ -7,8 +7,8 @@ logging.info(df.describe()) #shows data in a statistical manner
 logging.info(df[['Name','Sex','Age']])    #prints selected columns
 
 
-logging.info(df.dtypes[df.dtypes =='object'].index) #prints all data of type OBJECT
-logging.info(df.dtypes[df.dtypes=='float64'].index) #prints all numerical data.
+logging.info(df[df.dtypes[df.dtypes=='object'].index]) #prints all data of type OBJECT/STRING.
+logging.info(df[df.dtypes[df.dtypes=='int64'].index]) #prints all numerical data.
  
 # to print data from a particular interval , use [<upper bound>:<lower bound>:<jump>]
 logging.info(df[['Ticket']][4:11])
@@ -21,9 +21,10 @@ df['Cabin'].unique()
 
 logging.info(df.head())
 
-#filter the data  by age >18.
-logging.info(df[df.dtypes[df.dtypes=='object'].index])
+#to find the unique catagorical variable 
+logging.info(pd.Categorical(df['Pclass']))
+logging.info(df['Cabin'].unique())
 
-#to get the names of all passangers who payed greater fair than average.
-
-# to get the name of passangers who didnt pay any fare
+#to filter the data more precisely
+logging.info(df[df['Age']>18].describe())
+   
